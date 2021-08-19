@@ -1,0 +1,11 @@
+{% extends 'web_base.html' %}
+
+{% block content %}
+    <form method="POST" class="menu-form">
+        {% csrf_token %}
+        Do you really want to delete this data?
+        <br>
+        <button type="submit" class="save btn btn-success">Yes</button>
+        <a href="{% url 'menu_list' %}" class="btn btn-danger">No</a>
+    </form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'web_base.html' %}
+
+{% block content %}
+<div>
+    <h2>
+        {{ menu.name }}
+    </h2>
+    <p>{{menu.main_ingredient}}</p>
+    <p>{{ menu.description|linebreaksbr }}</p>
+    <a href="{% url 'menu_list' %}" class="btn btn-danger">Go Back</a>
+</div>
+{% endblock %}
